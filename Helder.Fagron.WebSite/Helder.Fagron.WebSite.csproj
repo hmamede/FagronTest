@@ -1,0 +1,951 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{936721DE-F5EB-415A-94AC-5CEC356A475F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Helder.Fagron.WebSite</RootNamespace>
+    <AssemblyName>Helder.Fagron.WebSite</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="assets\global\plugins\angular-touch\" />
+    <Folder Include="assets\global\plugins\angularjs\plugins\angular-file-upload\uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\app.constants.js" />
+    <Content Include="app\app.interceptors.js" />
+    <Content Include="app\app.js" />
+    <Content Include="app\app.layout.js" />
+    <Content Include="app\app.rotas.js" />
+    <Content Include="app\app.translate.js" />
+    <Content Include="app\autenticacao\views\login.html" />
+    <Content Include="app\autenticacao\views\login.js" />
+    <Content Include="app\cadastros\usuarios\criar.html" />
+    <Content Include="app\cadastros\usuarios\criar.js" />
+    <Content Include="app\cadastros\usuarios\index.html" />
+    <Content Include="app\cadastros\usuarios\index.js" />
+    <Content Include="app\comum\loader\loader.html" />
+    <Content Include="app\comum\views\home.html" />
+    <Content Include="app\comum\views\home.js" />
+    <Content Include="app\comum\views\modal.html" />
+    <Content Include="app\comum\views\modal.js" />
+    <Content Include="app\comum\views\modals\confirm\modalConfirm.html" />
+    <Content Include="app\comum\views\modals\confirm\modalConfirm.js" />
+    <Content Include="app\comum\views\modals\pergunta\modal.html" />
+    <Content Include="app\comum\views\modals\pergunta\modal.js" />
+    <Content Include="app\directives\directives.js" />
+    <Content Include="app\services\auth\authInterceptorService.js" />
+    <Content Include="app\services\auth\authService.js" />
+    <Content Include="app\services\cadastros\cliente\clienteService.js" />
+    <Content Include="app\services\grid\config-grid.js" />
+    <Content Include="app\services\language\languageService.js" />
+    <Content Include="app\tpl\footer.html" />
+    <Content Include="app\tpl\header.html" />
+    <Content Include="app\tpl\page-head.html" />
+    <Content Include="assets\admin\css\custom.css" />
+    <Content Include="assets\admin\css\layout.css" />
+    <Content Include="assets\admin\css\pages\about-us.css" />
+    <Content Include="assets\admin\css\pages\blog.css" />
+    <Content Include="assets\admin\css\pages\cenario.css" />
+    <Content Include="assets\admin\css\pages\coming-soon.css" />
+    <Content Include="assets\admin\css\pages\error.css" />
+    <Content Include="assets\admin\css\pages\image-crop.css" />
+    <Content Include="assets\admin\css\pages\inbox.css" />
+    <Content Include="assets\admin\css\pages\invoice.css" />
+    <Content Include="assets\admin\css\pages\lock.css" />
+    <Content Include="assets\admin\css\pages\lock2.css" />
+    <Content Include="assets\admin\css\pages\login-soft.css" />
+    <Content Include="assets\admin\css\pages\login.css" />
+    <Content Include="assets\admin\css\pages\login2.css" />
+    <Content Include="assets\admin\css\pages\login3.css" />
+    <Content Include="assets\admin\css\pages\news.css" />
+    <Content Include="assets\admin\css\pages\portfolio.css" />
+    <Content Include="assets\admin\css\pages\pricing-tables.css" />
+    <Content Include="assets\admin\css\pages\profile-old.css" />
+    <Content Include="assets\admin\css\pages\profile.css" />
+    <Content Include="assets\admin\css\pages\search.css" />
+    <Content Include="assets\admin\css\pages\tasks.css" />
+    <Content Include="assets\admin\css\pages\timeline-old.css" />
+    <Content Include="assets\admin\css\pages\timeline.css" />
+    <Content Include="assets\admin\css\pages\todo.css" />
+    <Content Include="assets\admin\css\themes\blue-hoki.css" />
+    <Content Include="assets\admin\css\themes\blue-steel.css" />
+    <Content Include="assets\admin\css\themes\default.css" />
+    <Content Include="assets\admin\css\themes\green-haze.css" />
+    <Content Include="assets\admin\css\themes\purple-plum.css" />
+    <Content Include="assets\admin\css\themes\purple-studio.css" />
+    <Content Include="assets\admin\css\themes\red-intense.css" />
+    <Content Include="assets\admin\css\themes\red-sunglo.css" />
+    <Content Include="assets\admin\css\themes\yellow-crusta.css" />
+    <Content Include="assets\admin\css\themes\yellow-orange.css" />
+    <Content Include="assets\admin\img\ajax-loading.gif" />
+    <Content Include="assets\admin\img\ajax-modal-loading.gif" />
+    <Content Include="assets\admin\img\avatar.png" />
+    <Content Include="assets\admin\img\avatar1.jpg" />
+    <Content Include="assets\admin\img\avatar10.jpg" />
+    <Content Include="assets\admin\img\avatar11.jpg" />
+    <Content Include="assets\admin\img\avatar2.jpg" />
+    <Content Include="assets\admin\img\avatar3.jpg" />
+    <Content Include="assets\admin\img\avatar4.jpg" />
+    <Content Include="assets\admin\img\avatar5.jpg" />
+    <Content Include="assets\admin\img\avatar6.jpg" />
+    <Content Include="assets\admin\img\avatar7.jpg" />
+    <Content Include="assets\admin\img\avatar8.jpg" />
+    <Content Include="assets\admin\img\avatar9.jpg" />
+    <Content Include="assets\admin\img\cards-coloridos.png" />
+    <Content Include="assets\admin\img\icon-color-close.png" />
+    <Content Include="assets\admin\img\icon-color.png" />
+    <Content Include="assets\admin\img\loading-spinner-blue.gif" />
+    <Content Include="assets\admin\img\loading-spinner-default.gif" />
+    <Content Include="assets\admin\img\loading-spinner-grey.gif" />
+    <Content Include="assets\admin\img\loading.gif" />
+    <Content Include="assets\admin\img\logo-albea.png" />
+    <Content Include="assets\admin\img\logo-big-white.png" />
+    <Content Include="assets\admin\img\logo-big.png" />
+    <Content Include="assets\admin\img\logo-blue-hoki.png" />
+    <Content Include="assets\admin\img\logo-blue-steel.png" />
+    <Content Include="assets\admin\img\logo-branco.png" />
+    <Content Include="assets\admin\img\logo-default.png" />
+    <Content Include="assets\admin\img\logo-fagron.png" />
+    <Content Include="assets\admin\img\logo-green-haze.png" />
+    <Content Include="assets\admin\img\logo-purple-plum.png" />
+    <Content Include="assets\admin\img\logo-purple-studio.png" />
+    <Content Include="assets\admin\img\logo-red-intense.png" />
+    <Content Include="assets\admin\img\logo-red-sunglo.png" />
+    <Content Include="assets\admin\img\logo-yellow-crusta.png" />
+    <Content Include="assets\admin\img\logo-yellow-orange.png" />
+    <Content Include="assets\admin\img\logo.png" />
+    <Content Include="assets\admin\img\menu-toggler.png" />
+    <Content Include="assets\admin\img\user.png" />
+    <Content Include="assets\admin\img\user2.jpg" />
+    <Content Include="assets\admin\img\user3.png" />
+    <Content Include="assets\admin\scripts\demo.js" />
+    <Content Include="assets\admin\scripts\layout.js" />
+    <Content Include="assets\admin\scripts\quick-sidebar.js" />
+    <Content Include="assets\global\css\components-md.css" />
+    <Content Include="assets\global\css\components-rounded.css" />
+    <Content Include="assets\global\css\components.css" />
+    <Content Include="assets\global\css\flag-icon-css\css\flag-icon.min.css" />
+    <Content Include="assets\global\css\flag-icon-css\flags\1x1\br.svg" />
+    <Content Include="assets\global\css\flag-icon-css\flags\1x1\es.svg" />
+    <Content Include="assets\global\css\flag-icon-css\flags\1x1\fr.svg" />
+    <Content Include="assets\global\css\flag-icon-css\flags\1x1\us.svg" />
+    <Content Include="assets\global\css\flag-icon-css\flags\4x3\br.svg" />
+    <Content Include="assets\global\css\flag-icon-css\flags\4x3\es.svg" />
+    <Content Include="assets\global\css\flag-icon-css\flags\4x3\fr.svg" />
+    <Content Include="assets\global\css\flag-icon-css\flags\4x3\us.svg" />
+    <Content Include="assets\global\css\plugins-md.css" />
+    <Content Include="assets\global\css\plugins.css" />
+    <Content Include="assets\global\css\ui-grid-custom.min.css" />
+    <Content Include="assets\global\css\ui-grid.min.css" />
+    <Content Include="assets\global\css\ui-grid.svg" />
+    <Content Include="assets\global\img\accordion-plusminus.png" />
+    <Content Include="assets\global\img\ajax-loading.gif" />
+    <Content Include="assets\global\img\ajax-modal-loading.gif" />
+    <Content Include="assets\global\img\avatar.png" />
+    <Content Include="assets\global\img\cards-coloridos.png" />
+    <Content Include="assets\global\img\datatable-row-openclose.png" />
+    <Content Include="assets\global\img\flags\ad.png" />
+    <Content Include="assets\global\img\flags\ae.png" />
+    <Content Include="assets\global\img\flags\af.png" />
+    <Content Include="assets\global\img\flags\ag.png" />
+    <Content Include="assets\global\img\flags\ai.png" />
+    <Content Include="assets\global\img\flags\al.png" />
+    <Content Include="assets\global\img\flags\am.png" />
+    <Content Include="assets\global\img\flags\an.png" />
+    <Content Include="assets\global\img\flags\ao.png" />
+    <Content Include="assets\global\img\flags\ar.png" />
+    <Content Include="assets\global\img\flags\as.png" />
+    <Content Include="assets\global\img\flags\at.png" />
+    <Content Include="assets\global\img\flags\au.png" />
+    <Content Include="assets\global\img\flags\aw.png" />
+    <Content Include="assets\global\img\flags\ax.png" />
+    <Content Include="assets\global\img\flags\az.png" />
+    <Content Include="assets\global\img\flags\ba.png" />
+    <Content Include="assets\global\img\flags\bb.png" />
+    <Content Include="assets\global\img\flags\bd.png" />
+    <Content Include="assets\global\img\flags\be.png" />
+    <Content Include="assets\global\img\flags\bf.png" />
+    <Content Include="assets\global\img\flags\bg.png" />
+    <Content Include="assets\global\img\flags\bh.png" />
+    <Content Include="assets\global\img\flags\bi.png" />
+    <Content Include="assets\global\img\flags\bj.png" />
+    <Content Include="assets\global\img\flags\bm.png" />
+    <Content Include="assets\global\img\flags\bn.png" />
+    <Content Include="assets\global\img\flags\bo.png" />
+    <Content Include="assets\global\img\flags\br.png" />
+    <Content Include="assets\global\img\flags\bs.png" />
+    <Content Include="assets\global\img\flags\bt.png" />
+    <Content Include="assets\global\img\flags\bv.png" />
+    <Content Include="assets\global\img\flags\bw.png" />
+    <Content Include="assets\global\img\flags\by.png" />
+    <Content Include="assets\global\img\flags\bz.png" />
+    <Content Include="assets\global\img\flags\ca.png" />
+    <Content Include="assets\global\img\flags\catalonia.png" />
+    <Content Include="assets\global\img\flags\cc.png" />
+    <Content Include="assets\global\img\flags\cd.png" />
+    <Content Include="assets\global\img\flags\cf.png" />
+    <Content Include="assets\global\img\flags\cg.png" />
+    <Content Include="assets\global\img\flags\ch.png" />
+    <Content Include="assets\global\img\flags\ci.png" />
+    <Content Include="assets\global\img\flags\ck.png" />
+    <Content Include="assets\global\img\flags\cl.png" />
+    <Content Include="assets\global\img\flags\cm.png" />
+    <Content Include="assets\global\img\flags\cn.png" />
+    <Content Include="assets\global\img\flags\co.png" />
+    <Content Include="assets\global\img\flags\cr.png" />
+    <Content Include="assets\global\img\flags\cs.png" />
+    <Content Include="assets\global\img\flags\cu.png" />
+    <Content Include="assets\global\img\flags\cv.png" />
+    <Content Include="assets\global\img\flags\cx.png" />
+    <Content Include="assets\global\img\flags\cy.png" />
+    <Content Include="assets\global\img\flags\cz.png" />
+    <Content Include="assets\global\img\flags\de.png" />
+    <Content Include="assets\global\img\flags\dj.png" />
+    <Content Include="assets\global\img\flags\dk.png" />
+    <Content Include="assets\global\img\flags\dm.png" />
+    <Content Include="assets\global\img\flags\do.png" />
+    <Content Include="assets\global\img\flags\dz.png" />
+    <Content Include="assets\global\img\flags\ec.png" />
+    <Content Include="assets\global\img\flags\ee.png" />
+    <Content Include="assets\global\img\flags\eg.png" />
+    <Content Include="assets\global\img\flags\eh.png" />
+    <Content Include="assets\global\img\flags\england.png" />
+    <Content Include="assets\global\img\flags\er.png" />
+    <Content Include="assets\global\img\flags\es.png" />
+    <Content Include="assets\global\img\flags\et.png" />
+    <Content Include="assets\global\img\flags\europeanunion.png" />
+    <Content Include="assets\global\img\flags\fam.png" />
+    <Content Include="assets\global\img\flags\fi.png" />
+    <Content Include="assets\global\img\flags\fj.png" />
+    <Content Include="assets\global\img\flags\fk.png" />
+    <Content Include="assets\global\img\flags\fm.png" />
+    <Content Include="assets\global\img\flags\fo.png" />
+    <Content Include="assets\global\img\flags\fr.png" />
+    <Content Include="assets\global\img\flags\ga.png" />
+    <Content Include="assets\global\img\flags\gb.png" />
+    <Content Include="assets\global\img\flags\gd.png" />
+    <Content Include="assets\global\img\flags\ge.png" />
+    <Content Include="assets\global\img\flags\gf.png" />
+    <Content Include="assets\global\img\flags\gh.png" />
+    <Content Include="assets\global\img\flags\gi.png" />
+    <Content Include="assets\global\img\flags\gl.png" />
+    <Content Include="assets\global\img\flags\gm.png" />
+    <Content Include="assets\global\img\flags\gn.png" />
+    <Content Include="assets\global\img\flags\gp.png" />
+    <Content Include="assets\global\img\flags\gq.png" />
+    <Content Include="assets\global\img\flags\gr.png" />
+    <Content Include="assets\global\img\flags\gs.png" />
+    <Content Include="assets\global\img\flags\gt.png" />
+    <Content Include="assets\global\img\flags\gu.png" />
+    <Content Include="assets\global\img\flags\gw.png" />
+    <Content Include="assets\global\img\flags\gy.png" />
+    <Content Include="assets\global\img\flags\hk.png" />
+    <Content Include="assets\global\img\flags\hm.png" />
+    <Content Include="assets\global\img\flags\hn.png" />
+    <Content Include="assets\global\img\flags\hr.png" />
+    <Content Include="assets\global\img\flags\ht.png" />
+    <Content Include="assets\global\img\flags\hu.png" />
+    <Content Include="assets\global\img\flags\id.png" />
+    <Content Include="assets\global\img\flags\ie.png" />
+    <Content Include="assets\global\img\flags\il.png" />
+    <Content Include="assets\global\img\flags\in.png" />
+    <Content Include="assets\global\img\flags\io.png" />
+    <Content Include="assets\global\img\flags\iq.png" />
+    <Content Include="assets\global\img\flags\ir.png" />
+    <Content Include="assets\global\img\flags\is.png" />
+    <Content Include="assets\global\img\flags\it.png" />
+    <Content Include="assets\global\img\flags\jm.png" />
+    <Content Include="assets\global\img\flags\jo.png" />
+    <Content Include="assets\global\img\flags\jp.png" />
+    <Content Include="assets\global\img\flags\ke.png" />
+    <Content Include="assets\global\img\flags\kg.png" />
+    <Content Include="assets\global\img\flags\kh.png" />
+    <Content Include="assets\global\img\flags\ki.png" />
+    <Content Include="assets\global\img\flags\km.png" />
+    <Content Include="assets\global\img\flags\kn.png" />
+    <Content Include="assets\global\img\flags\kp.png" />
+    <Content Include="assets\global\img\flags\kr.png" />
+    <Content Include="assets\global\img\flags\kw.png" />
+    <Content Include="assets\global\img\flags\ky.png" />
+    <Content Include="assets\global\img\flags\kz.png" />
+    <Content Include="assets\global\img\flags\la.png" />
+    <Content Include="assets\global\img\flags\lb.png" />
+    <Content Include="assets\global\img\flags\lc.png" />
+    <Content Include="assets\global\img\flags\li.png" />
+    <Content Include="assets\global\img\flags\lk.png" />
+    <Content Include="assets\global\img\flags\lr.png" />
+    <Content Include="assets\global\img\flags\ls.png" />
+    <Content Include="assets\global\img\flags\lt.png" />
+    <Content Include="assets\global\img\flags\lu.png" />
+    <Content Include="assets\global\img\flags\lv.png" />
+    <Content Include="assets\global\img\flags\ly.png" />
+    <Content Include="assets\global\img\flags\ma.png" />
+    <Content Include="assets\global\img\flags\mc.png" />
+    <Content Include="assets\global\img\flags\md.png" />
+    <Content Include="assets\global\img\flags\me.png" />
+    <Content Include="assets\global\img\flags\mg.png" />
+    <Content Include="assets\global\img\flags\mh.png" />
+    <Content Include="assets\global\img\flags\mk.png" />
+    <Content Include="assets\global\img\flags\ml.png" />
+    <Content Include="assets\global\img\flags\mm.png" />
+    <Content Include="assets\global\img\flags\mn.png" />
+    <Content Include="assets\global\img\flags\mo.png" />
+    <Content Include="assets\global\img\flags\mp.png" />
+    <Content Include="assets\global\img\flags\mq.png" />
+    <Content Include="assets\global\img\flags\mr.png" />
+    <Content Include="assets\global\img\flags\ms.png" />
+    <Content Include="assets\global\img\flags\mt.png" />
+    <Content Include="assets\global\img\flags\mu.png" />
+    <Content Include="assets\global\img\flags\mv.png" />
+    <Content Include="assets\global\img\flags\mw.png" />
+    <Content Include="assets\global\img\flags\mx.png" />
+    <Content Include="assets\global\img\flags\my.png" />
+    <Content Include="assets\global\img\flags\mz.png" />
+    <Content Include="assets\global\img\flags\na.png" />
+    <Content Include="assets\global\img\flags\nc.png" />
+    <Content Include="assets\global\img\flags\ne.png" />
+    <Content Include="assets\global\img\flags\nf.png" />
+    <Content Include="assets\global\img\flags\ng.png" />
+    <Content Include="assets\global\img\flags\ni.png" />
+    <Content Include="assets\global\img\flags\nl.png" />
+    <Content Include="assets\global\img\flags\no.png" />
+    <Content Include="assets\global\img\flags\np.png" />
+    <Content Include="assets\global\img\flags\nr.png" />
+    <Content Include="assets\global\img\flags\nu.png" />
+    <Content Include="assets\global\img\flags\nz.png" />
+    <Content Include="assets\global\img\flags\om.png" />
+    <Content Include="assets\global\img\flags\pa.png" />
+    <Content Include="assets\global\img\flags\pe.png" />
+    <Content Include="assets\global\img\flags\pf.png" />
+    <Content Include="assets\global\img\flags\pg.png" />
+    <Content Include="assets\global\img\flags\ph.png" />
+    <Content Include="assets\global\img\flags\pk.png" />
+    <Content Include="assets\global\img\flags\pl.png" />
+    <Content Include="assets\global\img\flags\pm.png" />
+    <Content Include="assets\global\img\flags\pn.png" />
+    <Content Include="assets\global\img\flags\pr.png" />
+    <Content Include="assets\global\img\flags\ps.png" />
+    <Content Include="assets\global\img\flags\pt.png" />
+    <Content Include="assets\global\img\flags\pw.png" />
+    <Content Include="assets\global\img\flags\py.png" />
+    <Content Include="assets\global\img\flags\qa.png" />
+    <Content Include="assets\global\img\flags\re.png" />
+    <Content Include="assets\global\img\flags\readme.txt" />
+    <Content Include="assets\global\img\flags\ro.png" />
+    <Content Include="assets\global\img\flags\rs.png" />
+    <Content Include="assets\global\img\flags\ru.png" />
+    <Content Include="assets\global\img\flags\rw.png" />
+    <Content Include="assets\global\img\flags\sa.png" />
+    <Content Include="assets\global\img\flags\sb.png" />
+    <Content Include="assets\global\img\flags\sc.png" />
+    <Content Include="assets\global\img\flags\scotland.png" />
+    <Content Include="assets\global\img\flags\sd.png" />
+    <Content Include="assets\global\img\flags\se.png" />
+    <Content Include="assets\global\img\flags\sg.png" />
+    <Content Include="assets\global\img\flags\sh.png" />
+    <Content Include="assets\global\img\flags\si.png" />
+    <Content Include="assets\global\img\flags\sj.png" />
+    <Content Include="assets\global\img\flags\sk.png" />
+    <Content Include="assets\global\img\flags\sl.png" />
+    <Content Include="assets\global\img\flags\sm.png" />
+    <Content Include="assets\global\img\flags\sn.png" />
+    <Content Include="assets\global\img\flags\so.png" />
+    <Content Include="assets\global\img\flags\sr.png" />
+    <Content Include="assets\global\img\flags\st.png" />
+    <Content Include="assets\global\img\flags\sv.png" />
+    <Content Include="assets\global\img\flags\sy.png" />
+    <Content Include="assets\global\img\flags\sz.png" />
+    <Content Include="assets\global\img\flags\tc.png" />
+    <Content Include="assets\global\img\flags\td.png" />
+    <Content Include="assets\global\img\flags\tf.png" />
+    <Content Include="assets\global\img\flags\tg.png" />
+    <Content Include="assets\global\img\flags\th.png" />
+    <Content Include="assets\global\img\flags\tj.png" />
+    <Content Include="assets\global\img\flags\tk.png" />
+    <Content Include="assets\global\img\flags\tl.png" />
+    <Content Include="assets\global\img\flags\tm.png" />
+    <Content Include="assets\global\img\flags\tn.png" />
+    <Content Include="assets\global\img\flags\to.png" />
+    <Content Include="assets\global\img\flags\tr.png" />
+    <Content Include="assets\global\img\flags\tt.png" />
+    <Content Include="assets\global\img\flags\tv.png" />
+    <Content Include="assets\global\img\flags\tw.png" />
+    <Content Include="assets\global\img\flags\tz.png" />
+    <Content Include="assets\global\img\flags\ua.png" />
+    <Content Include="assets\global\img\flags\ug.png" />
+    <Content Include="assets\global\img\flags\um.png" />
+    <Content Include="assets\global\img\flags\us.png" />
+    <Content Include="assets\global\img\flags\uy.png" />
+    <Content Include="assets\global\img\flags\uz.png" />
+    <Content Include="assets\global\img\flags\va.png" />
+    <Content Include="assets\global\img\flags\vc.png" />
+    <Content Include="assets\global\img\flags\ve.png" />
+    <Content Include="assets\global\img\flags\vg.png" />
+    <Content Include="assets\global\img\flags\vi.png" />
+    <Content Include="assets\global\img\flags\vn.png" />
+    <Content Include="assets\global\img\flags\vu.png" />
+    <Content Include="assets\global\img\flags\wales.png" />
+    <Content Include="assets\global\img\flags\wf.png" />
+    <Content Include="assets\global\img\flags\ws.png" />
+    <Content Include="assets\global\img\flags\ye.png" />
+    <Content Include="assets\global\img\flags\yt.png" />
+    <Content Include="assets\global\img\flags\za.png" />
+    <Content Include="assets\global\img\flags\zm.png" />
+    <Content Include="assets\global\img\flags\zw.png" />
+    <Content Include="assets\global\img\input-spinner.gif" />
+    <Content Include="assets\global\img\loading-spinner-blue.gif" />
+    <Content Include="assets\global\img\loading-spinner-default.gif" />
+    <Content Include="assets\global\img\loading-spinner-grey.gif" />
+    <Content Include="assets\global\img\loading.gif" />
+    <Content Include="assets\global\img\logo-branco.png" />
+    <Content Include="assets\global\img\overlay-icon.png" />
+    <Content Include="assets\global\img\portlet-collapse-icon-white.png" />
+    <Content Include="assets\global\img\portlet-collapse-icon.png" />
+    <Content Include="assets\global\img\portlet-config-icon-white.png" />
+    <Content Include="assets\global\img\portlet-config-icon.png" />
+    <Content Include="assets\global\img\portlet-expand-icon-white.png" />
+    <Content Include="assets\global\img\portlet-expand-icon.png" />
+    <Content Include="assets\global\img\portlet-reload-icon-white.png" />
+    <Content Include="assets\global\img\portlet-reload-icon.png" />
+    <Content Include="assets\global\img\portlet-remove-icon-white.png" />
+    <Content Include="assets\global\img\portlet-remove-icon.png" />
+    <Content Include="assets\global\img\remove-icon-small.png" />
+    <Content Include="assets\global\img\social\aboutme.png" />
+    <Content Include="assets\global\img\social\amazon.png" />
+    <Content Include="assets\global\img\social\behance.png" />
+    <Content Include="assets\global\img\social\blogger.png" />
+    <Content Include="assets\global\img\social\deviantart.png" />
+    <Content Include="assets\global\img\social\dribbble.png" />
+    <Content Include="assets\global\img\social\dropbox.png" />
+    <Content Include="assets\global\img\social\evernote.png" />
+    <Content Include="assets\global\img\social\facebook.png" />
+    <Content Include="assets\global\img\social\flickr.png" />
+    <Content Include="assets\global\img\social\forrst.png" />
+    <Content Include="assets\global\img\social\foursquare.png" />
+    <Content Include="assets\global\img\social\github.png" />
+    <Content Include="assets\global\img\social\googleplus.png" />
+    <Content Include="assets\global\img\social\gravatar.png" />
+    <Content Include="assets\global\img\social\instagram.png" />
+    <Content Include="assets\global\img\social\jolicloud.png" />
+    <Content Include="assets\global\img\social\klout.png" />
+    <Content Include="assets\global\img\social\last-fm.png" />
+    <Content Include="assets\global\img\social\linkedin.png" />
+    <Content Include="assets\global\img\social\myspace.png" />
+    <Content Include="assets\global\img\social\picasa.png" />
+    <Content Include="assets\global\img\social\pintrest.png" />
+    <Content Include="assets\global\img\social\quora.png" />
+    <Content Include="assets\global\img\social\reddit.png" />
+    <Content Include="assets\global\img\social\rss.png" />
+    <Content Include="assets\global\img\social\skype.png" />
+    <Content Include="assets\global\img\social\spotify.png" />
+    <Content Include="assets\global\img\social\stumbleupon.png" />
+    <Content Include="assets\global\img\social\tumblr.png" />
+    <Content Include="assets\global\img\social\twitter.png" />
+    <Content Include="assets\global\img\social\vimeo.png" />
+    <Content Include="assets\global\img\social\vk.png" />
+    <Content Include="assets\global\img\social\wordpress.png" />
+    <Content Include="assets\global\img\social\xing.png" />
+    <Content Include="assets\global\img\social\yahoo.png" />
+    <Content Include="assets\global\img\social\youtube.png" />
+    <Content Include="assets\global\img\syncfusion-icons-white.png" />
+    <Content Include="assets\global\img\syncfusion-icons.png" />
+    <Content Include="assets\global\img\user.png" />
+    <Content Include="assets\global\img\user2.jpg" />
+    <Content Include="assets\global\img\user3.png" />
+    <Content Include="assets\global\plugins\angular-busy\css\angular-busy.css" />
+    <Content Include="assets\global\plugins\angular-busy\js\angular-busy.js" />
+    <Content Include="assets\global\plugins\angular-datepicker\angular-bootstrap-datepicker.js" />
+    <Content Include="assets\global\plugins\angular-datepicker\angular-datepicker.js" />
+    <Content Include="assets\global\plugins\angular-datepicker\css\angular-material.css" />
+    <Content Include="assets\global\plugins\angular-datepicker\css\bootstrap-datepicker3.min.css" />
+    <Content Include="assets\global\plugins\angular-input-mask\angular.input.mask.js" />
+    <Content Include="assets\global\plugins\angular-translate\angular-translate-handler-log.js" />
+    <Content Include="assets\global\plugins\angular-translate\angular-translate-loader-static-files.js" />
+    <Content Include="assets\global\plugins\angular-translate\angular-translate-storage-cookie.js" />
+    <Content Include="assets\global\plugins\angular-translate\angular-translate-storage-local.js" />
+    <Content Include="assets\global\plugins\angular-translate\angular-translate.min.js" />
+    <Content Include="assets\global\plugins\angular-translate\tmhDynamicLocale.js" />
+    <Content Include="assets\global\plugins\angularjs\angular-animate.min.js" />
+    <Content Include="assets\global\plugins\angularjs\angular-aria.min.js" />
+    <Content Include="assets\global\plugins\angularjs\angular-cookies.min.js" />
+    <Content Include="assets\global\plugins\angularjs\angular-jwt.js" />
+    <Content Include="assets\global\plugins\angularjs\angular-local-storage.min.js" />
+    <Content Include="assets\global\plugins\angularjs\angular-material.min.js" />
+    <Content Include="assets\global\plugins\angularjs\angular-messages.min.js" />
+    <Content Include="assets\global\plugins\angularjs\angular-sanitize.js" />
+    <Content Include="assets\global\plugins\angularjs\angular-sanitize.min.js" />
+    <Content Include="assets\global\plugins\angularjs\angular-touch.min.js" />
+    <Content Include="assets\global\plugins\angularjs\angular-ui-router.min.js" />
+    <Content Include="assets\global\plugins\angularjs\angular.js" />
+    <Content Include="assets\global\plugins\angularjs\angular.min.js" />
+    <Content Include="assets\global\plugins\angularjs\i18n\angular-locale_en-us.js" />
+    <Content Include="assets\global\plugins\angularjs\i18n\angular-locale_es-es.js" />
+    <Content Include="assets\global\plugins\angularjs\i18n\angular-locale_fr.js" />
+    <Content Include="assets\global\plugins\angularjs\i18n\angular-locale_pt-br.js" />
+    <Content Include="assets\global\plugins\angularjs\plugins\angular-file-upload\angular-file-upload.min.js" />
+    <Content Include="assets\global\plugins\angularjs\plugins\angular-ui-router.min.js" />
+    <Content Include="assets\global\plugins\angularjs\plugins\ocLazyLoad.min.js" />
+    <Content Include="assets\global\plugins\angularjs\plugins\ui-bootstrap-tpls.min.js" />
+    <Content Include="assets\global\plugins\angularjs\plugins\ui-select\select.min.css" />
+    <Content Include="assets\global\plugins\angularjs\plugins\ui-select\select.min.js" />
+    <Content Include="assets\global\plugins\angularjs\plugins\ui-utils\ui-utils-ieshiv.js" />
+    <Content Include="assets\global\plugins\angularjs\plugins\ui-utils\ui-utils-ieshiv.min.js" />
+    <Content Include="assets\global\plugins\angularjs\plugins\ui-utils\ui-utils.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\css\bootstrap-datepicker.css" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\css\bootstrap-datepicker.min.css" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\css\bootstrap-datepicker.standalone.css" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\css\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\css\bootstrap-datepicker3.css" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\css\bootstrap-datepicker3.min.css" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\css\bootstrap-datepicker3.standalone.css" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\css\bootstrap-datepicker3.standalone.min.css" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\js\bootstrap-datepicker.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\js\bootstrap-datepicker.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.az.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.bs.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.cy.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.en-GB.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.eu.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.fa.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.fo.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.fr-CH.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.gl.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.hy.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.it-CH.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.kh.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.kk.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.me.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.nb.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.nl-BE.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.sr-latin.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.sr.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.vi.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-hover-dropdown\bootstrap-hover-dropdown.js" />
+    <Content Include="assets\global\plugins\bootstrap-hover-dropdown\bootstrap-hover-dropdown.min.js" />
+    <Content Include="assets\global\plugins\bootstrap-select\css\bootstrap-select.css" />
+    <Content Include="assets\global\plugins\bootstrap-select\js\bootstrap-select.js" />
+    <Content Include="assets\global\plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\global\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\global\plugins\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\global\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\global\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\global\plugins\excanvas.min.js" />
+    <Content Include="assets\global\plugins\font-awesome\css\font-awesome.min.css" />
+    <Content Include="assets\global\plugins\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\global\plugins\jquery-blockui\jquery.blockui.min.js" />
+    <Content Include="assets\global\plugins\jquery-cookie\jquery.cookie.min.js" />
+    <Content Include="assets\global\plugins\jquery-debounce\jquery-debounce.js" />
+    <Content Include="assets\global\plugins\jquery-jstree\default\32px.png" />
+    <Content Include="assets\global\plugins\jquery-jstree\default\32px_line.png" />
+    <Content Include="assets\global\plugins\jquery-jstree\default\32px_original.png" />
+    <Content Include="assets\global\plugins\jquery-jstree\default\40px.png" />
+    <Content Include="assets\global\plugins\jquery-jstree\default\style.css" />
+    <Content Include="assets\global\plugins\jquery-jstree\default\throbber.gif" />
+    <Content Include="assets\global\plugins\jquery-jstree\jstree.js" />
+    <Content Include="assets\global\plugins\jquery-migrate\jquery-migrate.min.js" />
+    <Content Include="assets\global\plugins\jquery-slimscroll\jquery.slimscroll.js" />
+    <Content Include="assets\global\plugins\jquery-slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="assets\global\plugins\jquery\jquery.min.js" />
+    <Content Include="assets\global\plugins\respond.min.js" />
+    <Content Include="assets\global\plugins\select2\select2-bootstrap.css" />
+    <Content Include="assets\global\plugins\select2\select2-spinner.gif" />
+    <Content Include="assets\global\plugins\select2\select2.css" />
+    <Content Include="assets\global\plugins\select2\select2.js" />
+    <Content Include="assets\global\plugins\select2\select2.min.js" />
+    <Content Include="assets\global\plugins\select2\select2.png" />
+    <Content Include="assets\global\plugins\select2\select2x2.png" />
+    <Content Include="assets\global\plugins\select2\select2_locale_ar.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_az.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_bg.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_ca.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_cs.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_da.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_de.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_el.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_es.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_et.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_eu.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_fa.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_fi.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_fr.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_gl.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_he.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_hr.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_hu.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_id.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_is.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_it.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_ja.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_ka.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_ko.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_lt.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_lv.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_mk.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_ms.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_nl.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_no.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_pl.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_pt-BR.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_pt-PT.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_ro.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_rs.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_ru.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_sk.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_sv.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_th.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_tr.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_ug-CN.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_uk.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_vi.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_zh-CN.js" />
+    <Content Include="assets\global\plugins\select2\select2_locale_zh-TW.js" />
+    <Content Include="assets\global\plugins\simple-line-icons\fonts\Simple-Line-Icons.dev.svg" />
+    <Content Include="assets\global\plugins\simple-line-icons\fonts\Simple-Line-Icons.svg" />
+    <Content Include="assets\global\plugins\simple-line-icons\icons-lte-ie7.js" />
+    <Content Include="assets\global\plugins\simple-line-icons\simple-line-icons.css" />
+    <Content Include="assets\global\plugins\simple-line-icons\simple-line-icons.min.css" />
+    <Content Include="assets\global\plugins\uniform\css\uniform.default.css" />
+    <Content Include="assets\global\plugins\uniform\css\uniform.default.min.css" />
+    <Content Include="assets\global\plugins\uniform\images\bg-input-focus.png" />
+    <Content Include="assets\global\plugins\uniform\images\bg-input.png" />
+    <Content Include="assets\global\plugins\uniform\images\sprite.png" />
+    <Content Include="assets\global\plugins\uniform\images\sprite_original.png" />
+    <Content Include="assets\global\plugins\uniform\jquery.uniform.js" />
+    <Content Include="assets\global\plugins\uniform\jquery.uniform.min.js" />
+    <Content Include="assets\global\plugins\viceri\busy-button\js\jquery-busy-button.js" />
+    <Content Include="assets\global\plugins\viceri\busy-button\js\viceri-busy-button.js" />
+    <Content Include="assets\global\plugins\viceri\select-language\js\viceri-language.js" />
+    <Content Include="assets\global\scripts\datatable.js" />
+    <Content Include="assets\global\scripts\metronic.js" />
+    <Content Include="css\site.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="gulpfile.js" />
+    <Content Include="index.html" />
+    <Content Include="js\app.bundle.js" />
+    <Content Include="js\vendor.bundle.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="webpack.config.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\resources\locale-en_US.json" />
+    <Content Include="app\resources\locale-es-ES.json" />
+    <Content Include="app\resources\locale-pt-BR.json" />
+    <Content Include="assets\global\css\components-md.css.map" />
+    <Content Include="assets\global\css\ui-grid.ttf" />
+    <Content Include="assets\global\css\ui-grid.woff" />
+    <Content Include="assets\global\plugins\angularjs\angular-cookies.min.js.map" />
+    <Content Include="assets\global\plugins\angularjs\angular-sanitize.min.js.map" />
+    <Content Include="assets\global\plugins\angularjs\angular-touch.min.js.map" />
+    <Content Include="assets\global\plugins\angularjs\angular.min.js.map" />
+    <Content Include="assets\global\plugins\angularjs\plugins\angular-file-upload\upload.php" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\LICENSE" />
+    <Content Include="assets\global\plugins\bootstrap-datepicker\README.md" />
+    <Content Include="assets\global\plugins\bootstrap-hover-dropdown\LICENSE" />
+    <Content Include="assets\global\plugins\bootstrap-hover-dropdown\README.md" />
+    <Content Include="assets\global\plugins\bootstrap\css\bootstrap.css.map" />
+    <Content Include="assets\global\plugins\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\global\plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\global\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\global\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="assets\global\plugins\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\global\plugins\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\global\plugins\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\global\plugins\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\global\plugins\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="assets\global\plugins\jquery-slimscroll\README.md" />
+    <Content Include="assets\global\plugins\jquery-slimscroll\slimScroll.jquery.json" />
+    <Content Include="assets\global\plugins\select2\bower.json" />
+    <Content Include="assets\global\plugins\select2\component.json" />
+    <Content Include="assets\global\plugins\select2\composer.json" />
+    <Content Include="assets\global\plugins\select2\LICENSE" />
+    <Content Include="assets\global\plugins\select2\README.md" />
+    <Content Include="assets\global\plugins\select2\select2.jquery.json" />
+    <Content Include="assets\global\plugins\select2\select2_locale_en.js.template" />
+    <Content Include="assets\global\plugins\simple-line-icons\fonts\Simple-Line-Icons.eot" />
+    <Content Include="assets\global\plugins\simple-line-icons\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="assets\global\plugins\simple-line-icons\fonts\Simple-Line-Icons.woff" />
+    <Content Include="assets\global\plugins\uniform\css\uniform.default.scss" />
+    <Content Include="assets\global\plugins\uniform\README.md" />
+    <Content Include="js\app.bundle.js.map" />
+    <Content Include="js\vendor.bundle.js.map" />
+    <Content Include="package.json" />
+    <Content Include="sass\admin\layout\layout.scss" />
+    <Content Include="sass\admin\layout\layout\_cenario.scss" />
+    <Content Include="sass\admin\layout\layout\_content.scss" />
+    <Content Include="sass\admin\layout\layout\_cores.scss" />
+    <Content Include="sass\admin\layout\layout\_fieldsets.scss" />
+    <Content Include="sass\admin\layout\layout\_footer.scss" />
+    <Content Include="sass\admin\layout\layout\_header.scss" />
+    <Content Include="sass\admin\layout\layout\_print.scss" />
+    <Content Include="sass\admin\layout\layout\_quick-sidebar.scss" />
+    <Content Include="sass\admin\layout\layout\_theme-panel.scss" />
+    <Content Include="sass\admin\layout\themes\blue-hoki.scss" />
+    <Content Include="sass\admin\layout\themes\blue-steel.scss" />
+    <Content Include="sass\admin\layout\themes\default.scss" />
+    <Content Include="sass\admin\layout\themes\green-haze.scss" />
+    <Content Include="sass\admin\layout\themes\purple-plum.scss" />
+    <Content Include="sass\admin\layout\themes\purple-studio.scss" />
+    <Content Include="sass\admin\layout\themes\red-intense.scss" />
+    <Content Include="sass\admin\layout\themes\red-sunglo.scss" />
+    <Content Include="sass\admin\layout\themes\yellow-crusta.scss" />
+    <Content Include="sass\admin\layout\themes\yellow-orange.scss" />
+    <Content Include="sass\admin\layout\themes\_base.scss" />
+    <Content Include="sass\admin\layout\_variables.scss" />
+    <Content Include="sass\admin\pages\about-us.scss" />
+    <Content Include="sass\admin\pages\blog.scss" />
+    <Content Include="sass\admin\pages\coming-soon.scss" />
+    <Content Include="sass\admin\pages\error.scss" />
+    <Content Include="sass\admin\pages\image-crop.scss" />
+    <Content Include="sass\admin\pages\inbox.scss" />
+    <Content Include="sass\admin\pages\invoice.scss" />
+    <Content Include="sass\admin\pages\lock.scss" />
+    <Content Include="sass\admin\pages\lock2.scss" />
+    <Content Include="sass\admin\pages\login-soft.scss" />
+    <Content Include="sass\admin\pages\login.scss" />
+    <Content Include="sass\admin\pages\login2.scss" />
+    <Content Include="sass\admin\pages\login3.scss" />
+    <Content Include="sass\admin\pages\news.scss" />
+    <Content Include="sass\admin\pages\portfolio.scss" />
+    <Content Include="sass\admin\pages\pricing-tables.scss" />
+    <Content Include="sass\admin\pages\profile-old.scss" />
+    <Content Include="sass\admin\pages\profile.scss" />
+    <Content Include="sass\admin\pages\search.scss" />
+    <Content Include="sass\admin\pages\tasks.scss" />
+    <Content Include="sass\admin\pages\timeline-old.scss" />
+    <Content Include="sass\admin\pages\timeline.scss" />
+    <Content Include="sass\admin\pages\todo.scss" />
+    <Content Include="sass\global\components-md.scss" />
+    <Content Include="sass\global\components-rounded.scss" />
+    <Content Include="sass\global\components.scss" />
+    <Content Include="sass\global\components\_alerts.scss" />
+    <Content Include="sass\global\components\_animate.scss" />
+    <Content Include="sass\global\components\_badges.scss" />
+    <Content Include="sass\global\components\_buttons.scss" />
+    <Content Include="sass\global\components\_carousel.scss" />
+    <Content Include="sass\global\components\_charts.scss" />
+    <Content Include="sass\global\components\_chats.scss" />
+    <Content Include="sass\global\components\_close.scss" />
+    <Content Include="sass\global\components\_dropdowns.scss" />
+    <Content Include="sass\global\components\_feeds.scss" />
+    <Content Include="sass\global\components\_flatui-color-variants.scss" />
+    <Content Include="sass\global\components\_font-icons.scss" />
+    <Content Include="sass\global\components\_form-layouts.scss" />
+    <Content Include="sass\global\components\_icon-buttons.scss" />
+    <Content Include="sass\global\components\_input-icons.scss" />
+    <Content Include="sass\global\components\_inputs.scss" />
+    <Content Include="sass\global\components\_labels.scss" />
+    <Content Include="sass\global\components\_list-groups.scss" />
+    <Content Include="sass\global\components\_loaders.scss" />
+    <Content Include="sass\global\components\_md-base.scss" />
+    <Content Include="sass\global\components\_md-checkboxes.scss" />
+    <Content Include="sass\global\components\_md-inputs.scss" />
+    <Content Include="sass\global\components\_md-radios.scss" />
+    <Content Include="sass\global\components\_metro-icons.scss" />
+    <Content Include="sass\global\components\_mixins.scss" />
+    <Content Include="sass\global\components\_modals.scss" />
+    <Content Include="sass\global\components\_notes.scss" />
+    <Content Include="sass\global\components\_pagination.scss" />
+    <Content Include="sass\global\components\_panels.scss" />
+    <Content Include="sass\global\components\_popovers.scss" />
+    <Content Include="sass\global\components\_portlets.scss" />
+    <Content Include="sass\global\components\_progress-bars.scss" />
+    <Content Include="sass\global\components\_reset-general.scss" />
+    <Content Include="sass\global\components\_reset-rounds.scss" />
+    <Content Include="sass\global\components\_social-icons.scss" />
+    <Content Include="sass\global\components\_statistic-blocks.scss" />
+    <Content Include="sass\global\components\_tables.scss" />
+    <Content Include="sass\global\components\_tabs.scss" />
+    <Content Include="sass\global\components\_tiles.scss" />
+    <Content Include="sass\global\components\_timeline.scss" />
+    <Content Include="sass\global\components\_typography.scss" />
+    <Content Include="sass\global\components\_utils.scss" />
+    <Content Include="sass\global\components\_wells.scss" />
+    <Content Include="sass\global\components\_widgets.scss" />
+    <Content Include="sass\global\plugins-md.scss" />
+    <Content Include="sass\global\plugins.scss" />
+    <Content Include="sass\global\plugins\_amchart.scss" />
+    <Content Include="sass\global\plugins\_bootbox.scss" />
+    <Content Include="sass\global\plugins\_bootstrap-colorpicker.scss" />
+    <Content Include="sass\global\plugins\_bootstrap-datepaginator.scss" />
+    <Content Include="sass\global\plugins\_bootstrap-datepicker.scss" />
+    <Content Include="sass\global\plugins\_bootstrap-daterangepicker.scss" />
+    <Content Include="sass\global\plugins\_bootstrap-datetimepicker.scss" />
+    <Content Include="sass\global\plugins\_bootstrap-editable.scss" />
+    <Content Include="sass\global\plugins\_bootstrap-fileinput.scss" />
+    <Content Include="sass\global\plugins\_bootstrap-gtreetable.scss" />
+    <Content Include="sass\global\plugins\_bootstrap-markdown.scss" />
+    <Content Include="sass\global\plugins\_bootstrap-modal.scss" />
+    <Content Include="sass\global\plugins\_bootstrap-select.scss" />
+    <Content Include="sass\global\plugins\_bootstrap-summercode.scss" />
+    <Content Include="sass\global\plugins\_bootstrap-switch.scss" />
+    <Content Include="sass\global\plugins\_bootstrap-tabdrop.scss" />
+    <Content Include="sass\global\plugins\_bootstrap-timepicker.scss" />
+    <Content Include="sass\global\plugins\_bootstrap-toastr.scss" />
+    <Content Include="sass\global\plugins\_bootstrap-wizard.scss" />
+    <Content Include="sass\global\plugins\_bootstrap-wysihtml5.scss" />
+    <Content Include="sass\global\plugins\_ckeditor.scss" />
+    <Content Include="sass\global\plugins\_clockface.scss" />
+    <Content Include="sass\global\plugins\_datatables.scss" />
+    <Content Include="sass\global\plugins\_dropzone.scss" />
+    <Content Include="sass\global\plugins\_fancybox.scss" />
+    <Content Include="sass\global\plugins\_fuelux.scss" />
+    <Content Include="sass\global\plugins\_fullcalendar.scss" />
+    <Content Include="sass\global\plugins\_gmaps.scss" />
+    <Content Include="sass\global\plugins\_gritter.scss" />
+    <Content Include="sass\global\plugins\_icheck.scss" />
+    <Content Include="sass\global\plugins\_jquery-easy-pie-chart.scss" />
+    <Content Include="sass\global\plugins\_jquery-file-upload.scss" />
+    <Content Include="sass\global\plugins\_jquery-multi-select.scss" />
+    <Content Include="sass\global\plugins\_jquery-notific8.scss" />
+    <Content Include="sass\global\plugins\_jquery-pwstrength-bootstrap.scss" />
+    <Content Include="sass\global\plugins\_jquery-slimscroll.scss" />
+    <Content Include="sass\global\plugins\_jquery-sparkline.scss" />
+    <Content Include="sass\global\plugins\_jquery-tags-input.scss" />
+    <Content Include="sass\global\plugins\_jquery-ui.scss" />
+    <Content Include="sass\global\plugins\_jqvmap.scss" />
+    <Content Include="sass\global\plugins\_jstree.scss" />
+    <Content Include="sass\global\plugins\_minicolors.scss" />
+    <Content Include="sass\global\plugins\_morris.scss" />
+    <Content Include="sass\global\plugins\_nouislider.scss" />
+    <Content Include="sass\global\plugins\_recaptcha.scss" />
+    <Content Include="sass\global\plugins\_select2.scss" />
+    <Content Include="sass\global\plugins\_ui-grid.scss" />
+    <Content Include="sass\global\plugins\_ui-select.scss" />
+    <Content Include="sass\global\plugins\_uniform.scss" />
+    <Content Include="sass\global\_variables-md.scss" />
+    <Content Include="sass\global\_variables.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62574</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62574/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

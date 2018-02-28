@@ -1,0 +1,82 @@
+//## Main Layout CSS Builder
+@import '../../global/_variables'; // global metronic framework variables
+@import '../../global/components/_mixins'; // global metronic framework mixings
+@import '_variables'; // theme level variables
+@mixin reset-container() {
+    >.container {
+        width: 100%;
+        max-width: none !important;
+        margin: 0 !important;
+    }
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: table;
+}
+
+footer {
+    height: 0;
+    clear: both;
+}
+
+@import 'layout/_print'; // print layout
+@import 'themes/default.scss';
+@import 'layout/_cenario'; // page header
+@import 'layout/_header'; // page header
+@import 'layout/_quick-sidebar'; // page quick sidebar
+@import 'layout/_content'; // page consnde
+@import 'layout/_footer'; // page footer
+@import 'layout/_cores'; // colors
+@import 'layout/_fieldsets'; // fieldset
+@import 'layout/_theme-panel'; // theme customizer panel
+
+/***  
+Page Loading      
+***/
+
+.page-on-load {
+    background: #fefefe;
+    .page-header,
+    .page-container,
+    .page-prefooter,
+    .page-footer,
+    >.clearfix {
+        display: none;
+        transition: all 2s;
+    }
+}
+
+table {
+    white-space: nowrap
+}
+
+#tabelaMetalizacao,
+#tabelaPintura,
+#tabelaInjecao,
+#tabelaMontagem {
+    tbody>tr>td:not(first-child) div {
+        width: 200px
+    }
+}
+
+.no-scroll-index {
+    overflow: hidden;
+}
+
+.align-right-valor-cotacao-moeda {
+    padding-right: 30px !important;
+}
+
+.number-align {
+    text-align: right;
+    padding-right: 30px !important;
+}
+
+.checkbox-align{
+    text-align: center;
+    padding-right: 30px !important;
+}

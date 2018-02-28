@@ -1,0 +1,30 @@
+﻿.ui-grid-cell {
+
+    .btn-group {
+        height: 100%;
+        width: 100%;
+
+        span {
+            position: absolute;
+            top: 50%;
+            transform: translate(0%, -50%);
+
+            i {
+                vertical-align: middle;
+                font-size: 19px;
+            }
+        }
+    }
+
+    .dropdown-menu {
+        //top: 50%;
+        //top: -380%;
+    }
+}
+
+/*.ui-grid-canvas .ui-grid-row:last-child:not(:first-child) .dropdown-menu {
+    top: -75px;
+}*/
+/*.ui-grid-canvas .ui-grid-row:nth-child(:last-child - 1) .dropdown-menu{
+    top: -75px;
+}*/

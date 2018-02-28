@@ -1,0 +1,37 @@
+<div class="row">
+    <ul class="page-breadcrumb breadcrumb">
+        <li>
+            <a href="#">Cadastros</a>
+            <i class="fa fa-circle"></i>
+        </li>
+        <li>
+            <span>Clientes</span>
+        </li>
+    </ul>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portlet light portlet-with-pagination">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <span class="caption-subject font-albea bold uppercase">Clientes Cadastrados</span>
+                    </div>
+                    <div class="actions">
+                        <div class="btn-group btn-group-devided" data-toggle="buttons">
+                            <button class="btn btn-primary" ui-sref="cadastros.clientes.criar">
+                                <i class="fa fa-plus"></i>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div ui-grid="vm.userGridOptions" ui-grid-selection ui-grid-pagination class="grid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
